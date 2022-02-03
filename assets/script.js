@@ -1,5 +1,5 @@
 // HINT: You can delete this console.log after you no longer need it!
-console.log('JavaScript code has loaded!')
+
 // First, tell us your name
 let yourName = "Django Daponte" // HINT: Replace this with your own name!
 
@@ -15,36 +15,84 @@ const credit = document.querySelector('#credit')
 // Code to update name display
 credit.textContent = `Created by ${yourName}`
 
-let totalgb = 0
+
 let gbPlusBtn = document.getElementById('add-gb')
 let qtygb= document.getElementById('qty-gb')
 let gbMinusBtn = document.getElementById('minus-gb')
 
-
+// plus and minus gb
 gbPlusBtn.addEventListener('click', function(i){
 gb++
 qtygb.textContent = gb
+})
 
 gbMinusBtn.addEventListener('click', function(i){
-    gb = gb -1
+    gb--;
     qtygb.textContent = gb
-    
 
+
+    // plus and minus cc
+})
+
+let ccMinusBtn= document.getElementById('minus-cc')
+let ccPlusBtn= document.getElementById('add-cc')
+let qtycc = document.getElementById('qty-cc')
+
+
+
+
+ccPlusBtn.addEventListener('click', function(i){
+    cc++
+    qtycc.textContent = cc
 
 })
 
 
 
+ccMinusBtn.addEventListener('click', function(i){
+    cc = cc -1
+    qtycc.textContent = cc
+})
+// sugar plus or minus
 
 
 
+let sgrMinusBtn= document.getElementById('minus-sugar')
+let sgrPlusBtn= document.getElementById('add-sugar')
+let qtysugar = document.getElementById('qty-sugar')
+
+
+sgrPlusBtn.addEventListener('click', function(i){
+    sugar++
+    qtysugar.textContent = sugar
+
+})
 
 
 
-// HINT: You can delete this console.log after you no longer need it!
+sgrMinusBtn.addEventListener('click', function(i){
+    sugar = sugar -1
+    qtysugar.textContent = sugar
+    
+})
+
+// total amount of cookies
 
 
-// TODO: Write the code to be run when the "+" button for "Gingerbread" is clicked
+let qtytotal = document.getElementById('qty-total')
 
+function cookies(Array){
+    var total = 0;
+ for(var i = 0; i <= Array.length; i++){
+    
+    qtytotal.addEventListener('click', function(i){
+    qtytotal = Number(i.target.Array)
+    qtytotal += total + Array[i];
+    return total;
+ 
 
-// TODO: Hook up event listeners for the rest of the buttons
+    Array.textContent = total })
+    }
+}
+cookies ([cc, gb, sugar])
+    
